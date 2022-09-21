@@ -1,6 +1,7 @@
 package application;
 
 import entities.Client;
+import entities.Order;
 import entities.OrderItem;
 import entities.Product;
 import entities.enums.OrderStatus;
@@ -31,6 +32,8 @@ public class Program {
         System.out.print("Status: ");
         OrderStatus status = OrderStatus.valueOf(sc.next());
 
+        Order order = new Order(new Date(), status, client);
+
         System.out.println("How many itens to this order? ");
         int N = sc.nextInt();
 
@@ -47,7 +50,11 @@ public class Program {
             Product product = new Product(productName, productPrice);
 
             OrderItem it = new OrderItem(quantity, productPrice, product);
+
+            order.addItem(it);
         }
+
+        System.out.println(order);
 
 
 
