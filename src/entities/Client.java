@@ -9,16 +9,16 @@ public class Client {
 
     private String name;
     private String email;
-    private Date birthdate;
+    private Date birthDate;
 
-    public Client(){
+    public Client() {
 
     }
 
-    public Client(String name, String email, Date birthdate) {
+    public Client(String name, String email, Date birthDate) {
         this.name = name;
         this.email = email;
-        this.birthdate = birthdate;
+        this.birthDate = birthDate;
     }
 
     public String getName() {
@@ -37,16 +37,16 @@ public class Client {
         this.email = email;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     @Override
     public String toString() {
-        return name + " (" + sdf.format(birthdate) + ") - " + email;
+        return name + " (" + sdf.format(birthDate) + ") - " + email;
     }
 }
